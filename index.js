@@ -31,7 +31,7 @@ console.log(`${GREEN}
 ===========================
 `);
 
-rl.question(`${YELLOW}⏱ Masukkan interval (20s s untuk detik atau 1.5m m untuk menit ): `, ans => {
+rl.question(`${YELLOW}⏱ Masukkan waktu pengulangan Chat (20s s untuk detik atau 1.5m m untuk menit ): `, ans => {
   const ms = parseInterval(ans);
   if (!ms || ms <= 0) {
     console.error(`${RED}❗ Format salah. ${RESET}Gunakan contoh: "20s" atau "1.5m"`);
