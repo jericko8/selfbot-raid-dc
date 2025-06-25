@@ -8,7 +8,7 @@ async function sendAndDelete(channel, cycle, MESSAGES) {
   const text = MESSAGES[Math.floor(Math.random() * MESSAGES.length)];
   try {
     const msg = await channel.send(text);
-    console.log(`📤 [#${cycle}] ${new Date().toLocaleTimeString()} → "${text}"`);
+    console.log(`${YELLOW}📤 [#${cycle}] ${new Date().toLocaleTimeString()} → "${text}"`);
     await msg.delete();
     console.log(`${GREEN}✅ Sukses kirim & hapus pesan ke #${cycle}`);
   } catch (e) {
