@@ -5,6 +5,8 @@ const RED = '\x1b[31m';
 const YELLOW = '\x1b[33m';
 const RESET = '\x1b[0m';
 const GREEN = '\x1b[32m';
+const CYAN = '\x1b[36m'
+const MAGENTA = '	\x1b[35m'
 
 const {
   TOKEN,
@@ -31,7 +33,7 @@ console.log(`${GREEN}
 ===========================
 `);
 
-rl.question(`${YELLOW}⏱ Masukkan waktu pengulangan Chat (20s s untuk detik atau 1.5m m untuk menit ): `, ans => {
+rl.question(`${YELLOW}⏱ Masukkan interval (20s s untuk detik atau 1.5m m untuk menit ): `, ans => {
   const ms = parseInterval(ans);
   if (!ms || ms <= 0) {
     console.error(`${RED}❗ Format salah. ${RESET}Gunakan contoh: "20s" atau "1.5m"`);
@@ -64,8 +66,8 @@ rl.question(`${YELLOW}⏱ Masukkan waktu pengulangan Chat (20s s untuk detik ata
 
     // monitoring banyak user
     try {
-      await setupMonitoring(client, CHANNEL_ID, GUILD_ID, WATCH_IDS);
-      console.log(`📍 Monitoring user IDs: ${WATCH_IDS.join(', ')}`);
+      await setupMonitoring(client, CHANNEL_ID, GUILD_ID, LOUNGE, WATCH_IDS);
+      console.log(`${CYAN}📍 Monitoring user IDs: ${WATCH_IDS.join(', ')}`);
     } catch (e) {
       console.error('❗ Gagal setup monitoring:', e);
     }
