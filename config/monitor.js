@@ -3,7 +3,7 @@ const YELLOW = '\x1b[33m';
 const RESET = '\x1b[0m';
 const GREEN = '\x1b[32m';
 const CYAN = '\x1b[36m'
-const MAGENTA = '	\x1b[35m'
+const MAGENTA = '\x1b[35m'
 
 
 // monitor.js
