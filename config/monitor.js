@@ -42,7 +42,7 @@ async function setupMonitoring(client, channelId, guildId, lounge,  watchUserIds
       typing.channel.id === channelId &&
       watchUserIds.includes(typing.user.id)
     ) {
-      console.log(`${RED}⌨️ User ${typing.user.id} Online di Arena`);
+      console.log(`${RED}ADMIN ${CYAN}${typing.user.globalName} ${RED}Sedang Online di Arena`);
       client.destroy();
       process.exit(0);
     }
@@ -54,7 +54,7 @@ async function setupMonitoring(client, channelId, guildId, lounge,  watchUserIds
       typing.channel.id === lounge &&
       watchUserIds.includes(typing.user.id)
     ) {
-      console.log(`${RED}⌨️ MOD ${typing.user.id} Online di Lounge`);
+      console.log(`${RED}ADMIN ${CYAN}${typing.user.globalName} ${RED}Sedang Online di Lounge`);
       client.destroy();
       process.exit(0);
     }
